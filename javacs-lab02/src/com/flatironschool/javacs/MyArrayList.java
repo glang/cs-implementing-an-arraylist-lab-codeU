@@ -63,6 +63,8 @@ public class MyArrayList<E> implements List<E> {
 			throw new IndexOutOfBoundsException();
 		}
 		// TODO: fill in the rest of this method
+
+		++size;
 	}
 
 	@Override
@@ -203,7 +205,9 @@ public class MyArrayList<E> implements List<E> {
 	@Override
 	public E set(int index, E element) {
 		// TODO: fill in this method.
-		return null;
+		E ret = get(index);
+		array[index] = element;
+		return ret;
 	}
 
 	@Override
